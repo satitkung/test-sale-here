@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="tag"
+            type="com.example.testsalehere.model.TagModel" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="8dp"
+        android:elevation="8dp"
+        android:background="@drawable/bg_goal_tag_item">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imv_logo"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:layout_marginTop="8dp"
+            app:tint="@color/old_rose"
+            android:src="@drawable/ic_achievement_header" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_title"
+            style="@style/Font.Body1"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{tag.title}"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/black" />
+
+    </LinearLayout>
+
+</layout>

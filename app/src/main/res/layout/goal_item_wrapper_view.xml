@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/orange"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcv_goal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:orientation="horizontal" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_total_goal"
+            style="@style/Font.H2.BOLD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            tools:text="3 Goals"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rcv_goal" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_txt_total_amount_title"
+            style="@style/Font.Body3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="@string/home_goal_saving_title"
+            android:textColor="@color/gray"
+            android:textSize="22sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txt_total_goal"
+            app:layout_constraintEnd_toStartOf="@+id/txt_total_amount"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toEndOf="@+id/txt_total_goal" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_total_amount"
+            style="@style/Font.H2.BOLD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:gravity="center"
+            tools:text="37,500"
+            app:autoSizeMinTextSize="14sp"
+            android:lines="1"
+            android:maxLines="1"
+            app:autoSizeTextType="uniform"
+            app:layout_constrainedWidth="true"
+            android:textColor="@color/white"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txt_total_goal"
+            app:layout_constraintEnd_toStartOf="@+id/txt_currency"
+            app:layout_constraintStart_toEndOf="@+id/txt_txt_total_amount_title" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_currency"
+            style="@style/Font.Body3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="@string/home_goal_currency"
+            android:textColor="@color/gray"
+            android:textSize="22sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txt_total_goal"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_total_goal">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_add"
+                style="@style/Font.Body1.BOLD"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_add_button_item"
+                android:text="@string/home_goal_add_btn"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

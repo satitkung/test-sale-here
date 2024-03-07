@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.example.testsalehere.ui.home.goal.HomeAddGoalViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/top_bar"
+            layout="@layout/add_goal_top_bar_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <ScrollView xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:clickable="false"
+            android:focusable="false"
+            tools:context=".ui.home.goal.HomeAddGoalFragment">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rcv_tag"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:overScrollMode="never" />
+
+                <com.example.testsalehere.custom_view.InputCustomView
+                    android:id="@+id/edt_target_amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="8dp"
+                    app:input_hint="@{@string/home_add_goal_amount_hint}"
+                    app:unit="@{@string/home_add_goal_amount_currency}" />
+
+                <com.example.testsalehere.custom_view.SelectorCustomView
+                    android:id="@+id/selector_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="16dp"
+                    app:icon="@{@drawable/ic_arrow_down}"
+                    app:selector_hint="@{@string/home_add_goal_date_hint}" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/Font.Body1.BOLD"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="24dp"
+                    android:includeFontPadding="false"
+                    android:text="@string/home_add_goal_subject_bank"
+                    android:textColor="@color/black"
+                    android:textSize="24sp" />
+
+                <com.example.testsalehere.custom_view.SelectorCustomView
+                    android:id="@+id/selector_account"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="8dp"
+                    app:icon="@{@drawable/ic_arrow_down}"
+                    app:selector_hint="@{@string/home_add_goal_date_hint}" />
+
+                <com.example.testsalehere.custom_view.InputCustomView
+                    android:id="@+id/edt_bank_amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="16dp"
+                    app:input_hint="@{@string/home_add_goal_amount_hint}"
+                    app:unit="@{@string/home_add_goal_amount_currency_per_month}" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_add"
+                    style="@style/Font.Body1.BOLD"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginVertical="16dp"
+                    android:background="@drawable/bg_add_button_item"
+                    android:text="@string/home_add_goal_btn"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+        </ScrollView>
+    </LinearLayout>
+</layout>

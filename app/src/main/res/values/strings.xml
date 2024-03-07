@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">TestSaleHere</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_achievement">Achievement</string>
+    <string name="title_user">User</string>
+
+    <!-- achievement -->
+    <string name="achievement_title">Achievement</string>
+    <string name="achievement_level">Level %1$,d</string>
+
+    <!-- home -->
+    <string name="home_goal_amount_title">%1$,d THB</string>
+    <string name="home_goal_remaining_day">%1$,d days left</string>
+    <string name="home_goal_good_status">Goods</string>
+    <string name="home_goal_unhappy_status">Unhappy</string>
+    <string name="home_goal_total">%1$,d Goals</string>
+    <string name="home_goal_saving_title">All Saving</string>
+    <string name="home_goal_amount">%1$,d</string>
+    <string name="home_goal_currency">THB</string>
+    <string name="home_goal_add_btn">+ New Goal</string>
+    <string name="home_offer_title">Best Offer</string>
+    <string name="home_suggest_title">Suggest for you</string>
+    <string name="home_add_goal_top_bar_title">What your Goal</string>
+    <string name="home_add_goal_amount_hint">Amount</string>
+    <string name="home_add_goal_amount_currency">THB</string>
+    <string name="home_add_goal_amount_currency_per_month">THB / Month</string>
+    <string name="home_add_goal_date_hint">Select Date</string>
+    <string name="home_add_goal_account_hint">Select Account</string>
+    <string name="home_add_goal_subject_bank">Bank Account</string>
+    <string name="home_add_goal_btn">Add</string>
+
+
+</resources>
